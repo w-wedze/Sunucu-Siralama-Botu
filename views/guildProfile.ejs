@@ -1,0 +1,182 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Twix - <%= guildData.name %></title>
+    <link rel="shortcut icon" type="image/x-icon" href="<%= guildData.iconURL %>">
+    <link href="../assets/css/tabler.min.css?1684106062" rel="stylesheet"/>
+    <link href="../assets//css/tabler-flags.min.css?1684106062" rel="stylesheet"/>
+    <link href="../assets/css/tabler-payments.min.css?1684106062" rel="stylesheet"/>
+    <link href="../assets/css/tabler-vendors.min.css?1684106062" rel="stylesheet"/>
+    <link href="../assets/css/demo.min.css?1684106062" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+    </style>
+  </head>
+  <body >
+    <script src="../assets/js/demo-theme.min.js?1684106062"></script>
+    <div class="page">
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-md d-print-none">
+        <div class="container-xl">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+            <a href="/">
+              <img src="../assets/img/logo/rs23.png" style="height: 50px; width: 50px;" alt="Twix">
+            </a>
+          </h1>
+          <div class="navbar-nav flex-row order-md-last">
+            
+            <div class="nav-item d-none d-md-flex me-3">
+                <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+                    <form id="searchForm" action="./" method="get" autocomplete="off" novalidate="">
+                      <div class="input-icon">
+                        <span class="input-icon-addon">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" class="form-control" placeholder="<%= guildData.name %> Sunucusu" aria-label="Search in website" disabled>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+            <div class="d-none d-md-flex">
+              <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Gece Modunu Aç" data-bs-original-title="Gece Modunu Aç">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path></svg>
+              </a>
+              <a href="?theme=light" class="nav-link px-0 hide-theme-light" data-bs-toggle="tooltip" data-bs-placement="bottom" aria-label="Gündüz Modunu Aç" data-bs-original-title="Gündüz Modunu Aç">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path></svg>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3 py-4">
+                <a href="#" class="btn btn-outline-dark active w-100" onclick="showAlert()">
+                 Oturum Aç
+                </a>
+              </div>
+          </div>
+        </div>
+      </header>
+      <div class="page-wrapper">
+        <div class="page-header d-print-none">
+            <div class="container-xl">
+              <div class="row g-2 align-items-center">
+        <div class="col text-start">
+          <h2 class="page-title">
+            <div class="col">
+              <h1 class="page-title">
+                <%= guildData.name %>
+              </h1>
+              <div class="text-muted mt-1">
+                <a href="/" style="color: #2785FF;">Twix</a> <label style="color: white;">&gt;</label>
+                <a href="/guilds" style="color: #2785FF;">Sunucular</a> <label style="color: white;">&gt;</label>
+                <a style="color: #86909D;"><%= guildData.name %></a> 
+            </div>
+            </div>
+          </h2>
+        </div>
+      </div>
+      </div>
+      </div>
+        <div class="page-body">
+          <div class="container-xl">
+            <div class="col-12 col-lg-6 offset-lg-3">
+              <div class="card">
+                  <div class="card-body p-4 text-center">
+                      <span class="avatar avatar-xl mb-3 rounded" style="background-image: url('<%= guildData.iconURL %>')"></span>
+                      <h3 class="m-0 mb-1"><a href="#"><%= guildData.name %></a></h3>
+                      <div class="text-muted">Açıklama bulunamadı.</div><br>
+                      <i class="ti ti-users" style="color: #86909D;"></i> <label style="color: #86909D;"> <%= guildData.memberCount %> / 500.000</label><br><br>
+                      
+                      <a href="https://discord.gg/<%= guildData.vanityURLCode %>" class="btn btn-outline-dark active w-100">
+                          Sunucuya Katıl
+                      </a>
+                  </div>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="nav-link" id="nav-collection-tab" data-bs-toggle="tab" data-bs-target="#tab-nav2" type="button" role="tab" aria-selected="false"> 
+                      <span class="profile-nav-button"> 
+                        <span class="artist-meta-item artist-meta-item-border">
+                           <span class="artist-meta-type" style="color: white;">Sesteki Üyeler</span><br>
+                           <span class="artist-art-collection" style="color: #2785FF;"><%= guildData.voiceChannelUsers %></span> 
+                          </span> 
+                          </span> 
+                  </button>  
+                  <button class="nav-link" id="nav-collection-tab" data-bs-toggle="tab" data-bs-target="#tab-nav2" type="button" role="tab" aria-selected="false"> 
+                    <span class="profile-nav-button"> 
+                      <span class="artist-meta-item artist-meta-item-border">
+                         <span class="artist-meta-type" style="color: white;">Kanallar</span><br>
+                         <span class="artist-art-collection" style="color: #2785FF;"><%= guildData.channelCount %></span> 
+                        </span> 
+                        </span> 
+                </button>  
+                <button class="nav-link" id="nav-collection-tab" data-bs-toggle="tab" data-bs-target="#tab-nav2" type="button" role="tab" aria-selected="false"> 
+                  <span class="profile-nav-button"> 
+                    <span class="artist-meta-item artist-meta-item-border">
+                       <span class="artist-meta-type" style="color: white;">Roller</span><br>
+                       <span class="artist-art-collection" style="color: #2785FF;"><%= guildData.roleCount %></span> 
+                      </span> 
+                      </span> 
+              </button>  
+              <button class="nav-link" id="nav-collection-tab" data-bs-toggle="tab" data-bs-target="#tab-nav2" type="button" role="tab" aria-selected="false"> 
+                <span class="profile-nav-button"> 
+                  <span class="artist-meta-item artist-meta-item-border">
+                     <span class="artist-meta-type" style="color: white;">Emojiler</span><br>
+                     <span class="artist-art-collection" style="color: #2785FF;"><%= guildData.emojiCount %></span> 
+                    </span> 
+                    </span> 
+            </button>     
+                          </div>
+              </div>
+          </div>
+        </div>    
+        
+        <footer class="footer footer-transparent d-print-none">
+          <div class="container-xl">
+            <div class="row text-center align-items-center flex-row-reverse">
+                <div class="col-lg-auto ms-lg-auto">
+                  <ul class="list-inline list-inline-dots mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://discord.com/users/1067476859933179954" target="_blank" class="link-secondary" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink icon-filled icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path></svg>
+                        Sponsor
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                  <ul class="list-inline list-inline-dots mb-0">
+                    <li class="list-inline-item">
+                      Tüm Hakları Saklıdır ©
+                      <a href="/" class="link-secondary">Twix</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+  function showAlert() {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Oturum Açılamadı!',
+      text: 'Oturum açma işlemi çok yakında.',
+      confirmButtonText: 'Tamam'
+    });
+  }
+    </script>
+    <script src="../assets/js/tabler.min.js?1684106062" defer></script>
+    <script src="../assets/js/demo.min.js?1684106062" defer></script>
+  </body>
+</html>

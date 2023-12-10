@@ -1,0 +1,470 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Twix - Topluluğa Katıl!</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./dist/img/logo/rs23.png">
+    <link href="./dist/css/tabler.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/tabler-flags.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/tabler-payments.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet"/>
+    <link href="./dist/css/demo.min.css?1684106062" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+    </style>
+  </head>
+  <body >
+    <script src="./dist/js/demo-theme.min.js?1684106062"></script>
+    <div class="page">
+      <!-- Navbar -->
+      <header class="navbar navbar-expand-md d-print-none" >
+        <div class="container-xl">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+            <a href=".">
+              <img src="./dist/img/logo/rs23.png" style="height: 50px; width: 50px;" alt="Twix">
+            </a>
+          </h1>
+          <div class="navbar-nav flex-row order-md-last">
+            
+            <div class="nav-item d-none d-md-flex me-3">
+                <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+                    <form action="./" method="get" autocomplete="off" novalidate="">
+                      <div class="input-icon">
+                        <span class="input-icon-addon">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+                        </span>
+                        <input type="text" value="" class="form-control" placeholder="Bir Topluluk Ara.." aria-label="Search in website">
+                      </div>
+                    </form>
+                  </div>
+            </div>
+            <div class="d-none d-md-flex">
+              <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Gece Modunu Aç" data-bs-toggle="tooltip"
+		   data-bs-placement="bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+              </a>
+              <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Gündüz Modunu Aç" data-bs-toggle="tooltip"
+		   data-bs-placement="bottom">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3 py-4">
+                <a href="#" class="btn btn-outline-dark active w-100" onclick="showAlert()">
+                 Oturum Aç
+                </a>
+              </div>
+          </div>
+        </div>
+      </header>
+      <header class="navbar-expand-md">
+        <div class="collapse navbar-collapse" id="navbar-menu">
+        </div>
+      </header>
+
+      <div class="page-wrapper">
+  
+        
+
+  <div class="page-wrapper">
+    <div class="page-header d-print-none">
+      <div class="container-xl">
+        <div class="row g-2 align-items-center">
+  <div class="col text-start">
+    <h2 class="page-title">
+      <div class="col">
+        <h2 class="page-title">
+         Sunucular
+        </h2>
+        <div class="text-muted mt-1"><a href="/" style="color: #2785FF;">Twix</a> <label style="color: white;">></label> Sunucular (<%= totalGuilds %>)</div>
+      </div>
+    </h2>
+  </div>
+</div>
+</div>
+</div>
+  <hr /><br>
+
+  <% if (botGuilds && botGuilds.length > 0) { %>
+    <% const sortedGuilds = botGuilds.sort((a, b) => b.voiceChannelUsers - a.voiceChannelUsers); %>
+    <div class="row mx-8">
+      <% sortedGuilds.forEach(guild => { %>
+        <div class="col-3 mb-4">
+          <div class="card" style="position: relative; overflow: hidden; margin-bottom: 20px;">
+            <div style="background-image: url('<%= guild.bannerURL %>'); background-size: cover; background-position: center center; height: 180px; display: flex; align-items: flex-end; justify-content: center; ">
+              <span class="avatar avatar-xl mb-4 rounded">
+                <img src="<%= guild.iconURL %>">
+              </span>
+            </div>
+            <div class="card-body p-4 py-5 text-center" style="position: relative; z-index: 1;">
+              <h3 class="mb-0"><a href="/guild/<%= guild.id %>"><%= guild.name %></a></h3><br>
+              <div class="text-muted">Oluşturulma: <p style="color: white;"><%= guild.createdAt.toISOString() %></p></div>
+              <div class="mb-3 d-flex justify-content-center">
+                <div class="text-muted me-3">Üyeler <p style="color: white;"><%= guild.memberCount %></p></div>
+                <div class="text-muted me-3">Oylar <p style="color: white;">0</p></div>
+                <div class="text-muted">Ses <p style="color: white;"><%= guild.voiceChannelUsers %></p></div>
+              </div>
+              
+                <a href="https://www.discord.gg/<%= guild.vanityURLCode %>" class="btn btn-outline-dark active w-100">
+                Sunucuya Katıl
+                </a>
+              
+            </div>
+            <div class="progress card-progress">
+              <div class="progress-bar" style="width: 100%" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" aria-label="38% Complete">
+                <span class="visually-hidden">38% Complete</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  <% } else { %>
+    <p>Herhangi bir sunucu listelenmedi.</p>
+  <% } %>
+  
+        <footer class="footer footer-transparent d-print-none">
+          <div class="container-xl">
+            <div class="row text-center align-items-center flex-row-reverse">
+              <div class="col-lg-auto ms-lg-auto">
+                <ul class="list-inline list-inline-dots mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://discord.com/users/1067476859933179954" target="_blank" class="link-secondary" rel="noopener">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink icon-filled icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
+                      Sponsor
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                <ul class="list-inline list-inline-dots mb-0">
+                  <li class="list-inline-item">
+                    Tüm Hakları Saklıdır &copy;
+                    <a href="." class="link-secondary">Twix</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+  function showAlert() {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Oturum Açılamadı!',
+      text: 'Oturum açma işlemi çok yakında.',
+      confirmButtonText: 'Tamam'
+    });
+  }
+</script>
+
+    <script src="./dist/js/tabler.min.js?1684106062" defer></script>
+    <script src="./dist/js/demo.min.js?1684106062" defer></script>
+    
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .image{
+    position: relative;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover{
+    color: #1e40af;
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.pricing{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pricing .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.pricing .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.pricing .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.pricing .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+}
+
+.pricing .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.pricing .card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.pricing .card button{
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
+
+</style>
+
+
+  </body>
+</html>
